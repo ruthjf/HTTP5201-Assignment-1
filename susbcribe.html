@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>TFD | The Food Dossier</title>
+  <meta name="description" content="The Food Dossier" />
+  <link rel="stylesheet" type="text/css" href="css/foodblog.css" />
+</head>
+
+<body>
+
+  <body>
+    <div id="pagecontainer">
+      <header>
+        <h2 id="pagetitle">The Food Dossier</h2>
+        <div id="nav">
+          <nav>
+            <h3 class="hidden">Menu</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Blog</a></li>
+              <li><a href="index.html">About</a></li>
+              <li><a href="susbcribe.html">Subscribe</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <form action="" method="POST" id="subscribe">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" />
+            <!-- to display name error message -->
+            <span>
+              <?= isset($namerr) ? $namerr : ''; ?>
+            </span>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+          <div>
+            <fieldset>
+              <label>Do you want to sign up for our newsletter?</label> <br />
+              <input type="radio" name="yes" id="yes" value="" />
+              <label for="yes">Yes</label>
+              <input type="radio" name="no" id="no" value="" />
+              <label for="no">No</label>
+            </fieldset>
+          </div>
+          <div>
+            <label for="daily">Daily</label>
+            <input type="checkbox" id="daily" name="daily" value="daily" />
+            <label for="weekly">Weekly</label>
+            <input type="checkbox" id="weekly" name="weekly" value="weekly" />
+            <label for="monthly">Monthly</label>
+            <input type="checkbox" id="monthly" name="monthly" value="monthly" />
+          </div>
+          <div>
+            <label for="interests">Interests</label>
+            <select id="interests" name="interests">
+              <option value="news" name="news">News</option>
+              <option value="sports" name="sports">Sports</option>
+              <option value="finance" name="finance">Finance</option>
+            </select>
+          </div>
+          <div>
+            <label>Comments:</label>
+            <input type="text" name="text" />
+          </div>
+          <div>
+            <input type="submit" value="Sign up" id="submit" />
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+
+</html>
